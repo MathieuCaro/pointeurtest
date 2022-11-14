@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int swap_int(int *a, int *b){
-    printf("Avant : La valeur de a est : %d et la valeur de b est : %d \n",*a,*b);
-    int temp;
+int swap_char(char *a, char *b){
+    printf("Avant : La valeur de a est : %c et la valeur de b est : %c \n",*a,*b);
+    char temp;
     temp = *a;
     *a = *b;
     *b = temp;
-    printf("Apres : La valeur de a est : %d et la valeur de b est : %d \n",*a,*b);
+    printf("Apres : La valeur de a est : %c et la valeur de b est : %c\n",*a,*b);
     return 0;
 }
 
@@ -84,11 +84,11 @@ int length_string(char *string){
     while(string[i]){
         i++;
     }
-    printf("La taille de la chaine est de : %d",i);
+    //printf("La taille de la chaine est de : %d",i);
     return i;
 }
 
-int reverse(char *tab){
+/*int reverse(char *tab){
     char tab2[]="";
     char *pointeur1, *pointeur2;
     int size=length_string(tab);
@@ -101,8 +101,17 @@ int reverse(char *tab){
         pointeur2++;
     }
     return 0;
-}
+}*/
 
-int fonction_test(){
-    
+void inverse_string(char* string){
+    //printf("taille chaine :%s",*string);
+    int length = length_string(string);
+    printf("taille chaine :%d",length);
+    char* pt;
+    char* pt_end = string+length-1;
+    for(pt = string; pt < string + length/2; pt++){
+        printf("taille chaine :%s",string);
+        swap_char(pt,pt_end);
+        pt_end--;
+    }
 }
