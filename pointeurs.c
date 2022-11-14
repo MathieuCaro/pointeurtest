@@ -2,12 +2,12 @@
 #include <stdlib.h>
 
 int swap_char(char *a, char *b){
-    printf("Avant : La valeur de a est : %c et la valeur de b est : %c \n",*a,*b);
+    //printf("Avant : La valeur de a est : %c et la valeur de b est : %c \n",*a,*b);
     char temp;
     temp = *a;
     *a = *b;
     *b = temp;
-    printf("Apres : La valeur de a est : %c et la valeur de b est : %c\n",*a,*b);
+    //printf("Apres : La valeur de a est : %c et la valeur de b est : %c\n",*a,*b);
     return 0;
 }
 
@@ -106,11 +106,11 @@ int length_string(char *string){
 void inverse_string(char* string){
     //printf("taille chaine :%s",*string);
     int length = length_string(string);
-    printf("taille chaine :%d",length);
+    //printf("taille chaine :%d",length);
     char* pt;
     char* pt_end = string+length-1;
     for(pt = string; pt < string + length/2; pt++){
-        printf("taille chaine :%s",string);
+        //printf("taille chaine :%s",string);
         swap_char(pt,pt_end);
         pt_end--;
     }

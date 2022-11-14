@@ -19,6 +19,6 @@ int main(){
     //char str[]="Bonjour";
     //printf("%c",reverse(str));
     inverse_string(chaine);
-    printf("%s\n",chaine);
+    printf("Inversement de la chaine : %s\n",chaine);
     return 0;
 }
